@@ -1,0 +1,6 @@
+wwwroot\css\json-formatter.css
+wwwroot\favicon.ico
+wwwroot\js\json-formatter.js
+C:\Users\srikanth.itharaju\Documents\JsonFormatter\wwwroot\css\json-formatter.css
+C:\Users\srikanth.itharaju\Documents\JsonFormatter\wwwroot\favicon.ico
+C:\Users\srikanth.itharaju\Documents\JsonFormatter\wwwroot\js\json-formatter.js

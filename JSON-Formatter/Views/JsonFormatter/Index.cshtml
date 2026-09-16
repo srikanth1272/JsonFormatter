@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "JSON Formatter";
+}
+
+<section class="formatter-app">
+    <header class="app-header">
+        <div class="header-content">
+            <div>
+                <h1>JSON Formatter</h1>
+                <p>Click on Keys to copy values. Double-click keys to copy key-value.</p>
+            </div>
+            <div class="toolbar" role="toolbar" aria-label="JSON formatting actions">
+                <button class="toolbar-button toolbar-button-primary" type="button" data-action="beautify" title="">✨ Beautify</button>
+                <button class="toolbar-button" type="button" data-action="minify" title="">🗜 Remove Whitespace</button>
+                <button class="toolbar-button toolbar-button-danger" type="button" data-action="clear" title="">🗑 Clear</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="formatter-workspace">
+        <section class="formatter-panel" aria-labelledby="input-heading">
+            <div class="panel-header">
+                <h2 id="input-heading">INPUT JSON</h2>
+                <span class="character-count" id="characterCount">0 characters</span>
+            </div>
+            <div class="input-panel-body">
+                <textarea id="jsonInput"
+                          spellcheck="false"
+                          autocapitalize="off"
+                          autocomplete="off"
+                          aria-label="JSON input"
+                          aria-describedby="validationError"></textarea>
+                <div id="validationError" class="validation-error" role="alert" hidden></div>
+            </div>
+        </section>
+
+        <section class="formatter-panel" aria-labelledby="tree-heading">
+            <div class="panel-header">
+                <h2 id="tree-heading">INTERACTIVE TREE</h2>
+                <span class="tree-status" id="treeStatus">Waiting for JSON</span>
+            </div>
+            <div class="tree-panel-body">
+                <div id="jsonTree" class="json-tree" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="copyToast" class="copy-toast" role="status" aria-live="polite" hidden>Copied!</div>
+</section>
+
+@section Scripts {
+    <script src="~/js/json-formatter.js" asp-append-version="true"></script>
+}
